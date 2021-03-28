@@ -4,10 +4,21 @@
 /* and above unless overwritten below */
 
 body {
-  background: #1A1A1D;
+  background-image: url('https://images.unsplash.com/photo-1458640904116-093b74971de9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2552&q=80');
 }
 
+nav {
+  background-color: #1A1A1D;
+  position:relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 35px;
+}
 
+nav a {
+  display: flex;
+  color: #C3073F
+}
 
 /* TABLET STYLES */
 
@@ -16,7 +27,8 @@ body {
   /* applies to screens wider than 499px */
 
   body {
-    background: #1A1A1D;
+    background-image: url('https://images.unsplash.com/photo-1458640904116-093b74971de9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2552&q=80');
+
   }
 }
 
@@ -29,6 +41,32 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background: #1A1A1D;
+    background-image: url('https://images.unsplash.com/photo-1458640904116-093b74971de9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2552&q=80');
+    background-repeat:no-repeat;
+    background-size: 100%;
   }
+
+  .mainText {
+    color: #C3073F;
+    align: center;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #1A1A1D;
+    position:relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  nav a {
+    display:inline;
+    color: #4E4E50;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+  }
+
 }
