@@ -4,7 +4,7 @@
 /* and above unless overwritten below */
 
 body {
-  background: White;
+  background: #1A1A1D;
 }
 
 
@@ -16,7 +16,7 @@ body {
   /* applies to screens wider than 499px */
 
   body {
-    background: White;
+    background: #1A1A1D;
   }
 }
 
@@ -29,6 +29,6 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background: White;
+    background: #1A1A1D;
   }
 }
