@@ -4,8 +4,8 @@
 /* and above unless overwritten below */
 
 body {
-  background: #fcc;
-} 
+  background: White;
+}
 
 
 
@@ -14,10 +14,10 @@ body {
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
-    background: #cfc;
-  } 
+    background: White;
+  }
 }
 
 
@@ -29,6 +29,6 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background: #ccf;
-  } 
+    background: White;
+  }
 }
