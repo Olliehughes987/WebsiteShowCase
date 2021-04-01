@@ -79,8 +79,9 @@ h1, h2, h3, header {
   font-family: 'Kiwi Maru', serif;
 }
 
-h1 {
+h1, h2{
   text-align: center;
+  background-color: #f7f7f7;
 }
 
 
@@ -101,5 +102,35 @@ h1 {
 
   /* applies to screens wider than 999px */
 
+html {
+  font-size: 1.5vw;
+}
+
+h1, h2 {
+  padding-top: 1rem;
+}
+
+#menuToggler {
+  display: none;
+}
+
+header {
+  
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  max-height: 3rem;
+}
+
+nav a {
+  font-size: 1rem;
+}
+
+nav a:hover {
+  background-color: #72c5c4;
+}
 
 }
