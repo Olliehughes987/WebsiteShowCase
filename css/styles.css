@@ -81,7 +81,12 @@ h1, h2, h3, header {
 
 h1, h2{
   text-align: center;
-  background-color: coral;
+}
+
+
+#image-left, #image-right {
+  height: 15rem;
+  align-self: center;
 }
 
 
@@ -114,9 +119,6 @@ h1, h2 {
   display: none;
 }
 
-header {
-
-}
 
 nav {
   display: flex;
@@ -131,6 +133,23 @@ nav a {
 
 nav a:hover {
   background-color: #72c5c4;
+}
+
+#image-left {
+  height: 15rem;
+  float: left;
+  padding-right: 1rem;
+}
+
+#image-right {
+  height: 15rem;
+  float: right;
+  padding-right: 1rem;
+}
+
+
+.mainText {
+  display: block;
 }
 
 }
