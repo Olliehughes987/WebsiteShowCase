@@ -84,10 +84,13 @@ h1, h2{
 }
 
 
-#image-left, #image-right {
+#image-left, #image-right, #image-middle {
+  display: block;
+  margin: 0 auto;
   height: 15rem;
-  align-self: center;
+  width: 18rem;
 }
+
 
 
 
@@ -95,7 +98,9 @@ h1, h2{
 
 @media screen and (min-width: 500px) {
 
-  /* applies to screens wider than 499px */
+  html {
+    font-size: 3vw;
+  }
 
 }
 
@@ -108,7 +113,7 @@ h1, h2{
   /* applies to screens wider than 999px */
 
 html {
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 h1, h2 {
@@ -148,8 +153,9 @@ nav a:hover {
 }
 
 
-.mainText {
+.element {
   display: block;
+  height: 20rem;
 }
 
 }
