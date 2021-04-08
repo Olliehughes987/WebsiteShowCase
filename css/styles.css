@@ -24,10 +24,13 @@ header, .header-top {
 }
 
 .header-top {
+  background-color: var(--cyan);
   display: flex;
   justify-content: space-between;
-  background-color: var(--cyan);
   color: white;
+}
+
+.container {
 }
 
 .logo, #menuToggler {
@@ -42,6 +45,8 @@ header, .header-top {
 }
 
 nav {
+  background-color: var(--cyan);
+  width: 100%;
   position: relative;
   transition: max-height 0.3s ease-in;
   overflow: hidden;
@@ -86,9 +91,10 @@ h1, h2{
 
 #image-left, #image-right, #image-middle {
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   height: 15rem;
-  width: 18rem;
+  width: 100%;
 }
 
 
@@ -112,28 +118,49 @@ h1, h2{
 
   /* applies to screens wider than 999px */
 
+
 html {
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 h1, h2 {
-  padding-top: 1rem;
+}
+
+p {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #menuToggler {
   display: none;
 }
 
+.container-head {
+  background-color: var(--blue);
+  padding-left: 305px;
+  width: 100%;
+  max-width: 1135px;
+}
+
+.container-body {
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 30px;
+}
 
 nav {
+  background-color: var(--blue);
+  align-items: center;
+  position: relative;
   display: flex;
   flex-direction: row;
   overflow: auto;
-  max-height: 3rem;
+  max-height: 4rem;
+  max-width: 900px;
 }
 
 nav a {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -141,21 +168,32 @@ nav a:hover {
 }
 
 #image-left {
-  height: 15rem;
+  padding-top: 20px;
   float: left;
-  padding-right: 1rem;
+  padding-right: 1rem;\
 }
 
 #image-right {
-  height: 15rem;
   float: right;
   padding-right: 1rem;
+}
+
+#image-middle {
+  align-content: center;
+  position: relative;
+}
+
+#image-left, #image-middle, #image-right {
+  height: 15rem;
+  width: 18rem;
 }
 
 
 .element {
   display: block;
   height: 20rem;
+  background-color: #fdf6f2;
+  padding-top: 5px;
 }
 
 }
