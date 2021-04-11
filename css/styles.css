@@ -123,6 +123,17 @@ h1, h2{
   padding: 0.5rem;
 }
 
+#delText {
+  padding: 0.5rem;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+}
+
+
+
+
+}
+
 
 
 /* TABLET STYLES */
@@ -131,6 +142,26 @@ h1, h2{
 
   html {
     font-size: 3vw;
+  }
+
+  #routineGrid {
+    display: block;
+    max-width: 100px;
+  }
+
+  #routineGrid input{
+    padding-top: 1rem;
+    margin-top: 1rem;;
+  }
+
+  #addText {
+    padding: 2rem;
+  }
+
+  #delText {
+    padding: 1rem;
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
   }
 
 }
@@ -220,7 +251,7 @@ h1, h2{
 
   #routineGrid input{
     padding-top: 0.5rem;
-    margin-top: 1rem;;
+    margin-top: 0.5rem;;
   }
 
 }
