@@ -1,17 +1,14 @@
 var count = 1;
-disableButton("delText");
-
 
 /*  ----FUNCTIONS----  */
 
-  // disables/enables the desired buttons
-function disableButton(elem) {
-  document.getElementById(elem).disabled = true;
+/* toggles whether the button is disabled or not
+   true = disabled, false = enabled
+*/
+function toggleDisable(elem, state) {
+  document.getElementById(elem).disabled = state;
 }
 
-function enableButton(elem) {
-  document.getElementById(elem).disabled = false;
-}
 
 /* ----ON CLICK---- */
 
@@ -29,9 +26,9 @@ menuToggler.addEventListener('click', event => {
 addText.addEventListener('click', event => {
   switch(count) {
     case 7:
-      disableButton("addText");
+      toggleDisable("addText", true);
     default:
-      enableButton("delText");
+      toggleDisable("delText", false);
       count = count + 1;
       var input = document.createElement('input');
       input.setAttribute("id", "row" + count);
@@ -46,10 +43,10 @@ addText.addEventListener('click', event => {
 delText.addEventListener('click', event => {
   switch(count) {
     case 2:
-      disableButton("delText");
+      toggleDisable("delText", true);
     default:
       var curr = document.getElementById("row" + count);
       curr.remove();
       count = count - 1;
-      enableButton("addText");
+      toggleDisable("addText", false);
   }});
