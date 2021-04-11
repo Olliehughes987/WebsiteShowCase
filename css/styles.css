@@ -38,7 +38,7 @@ header, .header-top .container {
 
 }
 
-.grid-container, .routineGrid {
+.grid-container, .routineGrid, .column{
   max-height: none;
   height: auto;
 }
@@ -109,6 +109,19 @@ h1, h2{
   width: 100%;
 }
 
+#routineGrid {
+  display: block;
+  max-width: 100px;
+}
+
+#routineGrid input{
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;;
+}
+
+#addText {
+  padding: 0.5rem;
+}
 
 
 
@@ -198,6 +211,16 @@ h1, h2{
     display: block;
     height: 20rem;
     padding-top: 5px;
+  }
+
+  #routineGrid {
+    display: block;
+    max-width: 100px;
+  }
+
+  #routineGrid input{
+    padding-top: 0.5rem;
+    margin-top: 1rem;;
   }
 
 }
