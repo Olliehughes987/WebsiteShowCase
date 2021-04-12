@@ -20,6 +20,18 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, header {
+  font-family: 'Kiwi Maru', serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1, h2{
+  text-align: center;
+}
+
 header, .header-top .container {
   height: 3rem;
 }
@@ -92,14 +104,6 @@ main {
   margin: 0 1rem;
 }
 
-h1, h2, h3, header {
-  font-family: 'Kiwi Maru', serif;
-}
-
-h1, h2{
-  text-align: center;
-}
-
 
 #image-left, #image-right, #image-middle {
   display: block;
@@ -128,8 +132,6 @@ h1, h2{
   padding-left: 0.65rem;
   padding-right: 0.65rem;
 }
-
-
 
 
 }
@@ -176,7 +178,7 @@ h1, h2{
 
 
   html {
-    font-size: 1.2vw;
+    font-size: 100%;
   }
 
   header {
@@ -186,6 +188,10 @@ h1, h2{
   h1, h2 {
   }
 
+  article, section {
+    clear: both;
+  }
+
 
   #menuToggler {
     display: none;
@@ -193,13 +199,10 @@ h1, h2{
 
   .container {
     max-width: 900px;
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin: 0 auto;
   }
 
-  nav {
-  }
+
 
   nav .container {
     display: flex;
@@ -217,7 +220,6 @@ h1, h2{
   }
 
   #image-left {
-    padding-top: 2rem;
     float: left;
     padding-right: 1rem;
   }
@@ -235,13 +237,6 @@ h1, h2{
   #image-left, #image-middle, #image-right {
     height: 15rem;
     width: 18rem;
-  }
-
-
-  .element {
-    display: block;
-    height: 20rem;
-    padding-top: 5px;
   }
 
   #routineGrid {
