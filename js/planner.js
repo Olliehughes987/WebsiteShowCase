@@ -17,9 +17,18 @@ delTextBox = (name) => {
 }
 
 
-/* When the addText button (+) is clicked, it adds a text box under the current ones.
-   However, if there is already 7 then is disables the button as it has reached the
-   limit.
+addToStorage = () => {
+  localStorage.routineList = routineList;
+  console.log(localStorage.routineList + "stored");
+}
+
+loadFromStorage = () => {
+    routineList = localStorage.routineList.split(",");
+}
+
+/* When the addText button (+) is clicked, it adds a text box under the current
+   ones. However, if there is already 7 then is disables the button as it has
+   reached the limit.
 */
 addText.addEventListener('click', event => {
   switch(count) {
@@ -31,10 +40,10 @@ addText.addEventListener('click', event => {
       addTextBox("row" + count);
   }});
 
-/* Performs the same as the addText but removes instead of creating. Once there is
-   only 2 elements left in the list and the button is clicked, it disables the delete
-   button as otherwise the user could click it and make the variable go negative which
-   would cause an error.
+/* Performs the same as the addText but removes instead of creating. Once there
+   is only 2 elements left in the list and the button is clicked, it disables
+   the delete button as otherwise the user could click it and make the variable
+   go negative which would cause an error.
 */
 delText.addEventListener('click', event => {
   switch(count) {
@@ -52,19 +61,25 @@ save.addEventListener('click', event => {
     let inp = document.getElementById("row" + (i + 1)).value;
     routineList[i] = inp;
   }
-    console.log(routineList);
+  addToStorage();
 });
 
 
 load.addEventListener('click', event => {
+  loadFromStorage();
   if(count < routineList.length) {
     for(let i = count; i < routineList.length; i++) {
       addTextBox("row" + (i + 1));
-      count = i;
     }
     count = routineList.length;
-    for(let i = 1; i <= routineList.length; i++) {
-      document.getElementById("row" + i).value = routineList[i-1];
+  }
+  if (count > routineList.length) {
+    for(let i = count; i > routineList.length; i--) {
+      delTextBox("row" + i);
     }
+    count = routineList.length;
+  }
+  for(let i = 1; i <= routineList.length; i++) {
+    document.getElementById("row" + i).value = routineList[i-1];
   }
 });
