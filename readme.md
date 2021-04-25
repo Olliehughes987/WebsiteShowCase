@@ -11,13 +11,13 @@ throughout the website.
 The website was created with mobile first in mind, this means that it is
 fully functional on mobile and has been scaled up and modified to work on
 desktop. This provides a responsive feel to the website while allowing for any
-device to work with it. 
+device to work with it.
 
 
 ## Websites used for the development
 
-[Used for guide on how to use local storage to store the routine.](www.w3schools.com)
+[Used for guide on how to use local storage to store the routine.](https://www.w3schools.com)
 
-[Used to search for methods of solving certain problems.](www.stackoverflow.com)
+[Used to search for methods of solving certain problems.](https://www.stackoverflow.com)
 
 [Used for formatting CSS using flexboxes](https://css-tricks.com/)
