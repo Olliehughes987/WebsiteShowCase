@@ -1,17 +1,23 @@
-# CTEC3905 Assignment
+# P2421386 Front End Web Development
 
-This repository contains basic boilerplate code for you to get started with.
+This website was created by Oliver Hughes for the CTEC3905 module for DeMontfort
+University. It is created using base HTML, CSS, and Javascript.
 
-You will need to replace the contents of these files with your own code.
+The code has been developed with a preferred line length of 80 characters to
+ensure that the code stays neat and readable. I have also used sectioning
+wherever appropriate and alt tags on images to help improve accessibility
+throughout the website.  
 
-## index.html
+The website was created with mobile first in mind, this means that it is
+fully functional on mobile and has been scaled up and modified to work on
+desktop. This provides a responsive feel to the website while allowing for any
+device to work with it. 
 
-The `index.html` file includes a basic template with a link to the `css/styles.css` file and a script tag after the main content which links to the `js/scripts.js` file.
 
-## css/styles.css
+## Websites used for the development
 
-The `css/styles.css` file contains a basic starting template for a responsive page.
+[Used for guide on how to use local storage to store the routine.](www.w3schools.com)
 
-## js/scripts.js
+[Used to search for methods of solving certain problems.](www.stackoverflow.com)
 
-The `js/scripts.js` file contains a simple console.log statement to confirm that it is being executed.
+[Used for formatting CSS using flexboxes](https://css-tricks.com/)
