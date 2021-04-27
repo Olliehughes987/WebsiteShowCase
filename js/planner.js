@@ -26,6 +26,30 @@ loadFromStorage = () => {
     routineList = localStorage.routineList.split(",");
 }
 
+correctTextBoxes = () => {
+  try {
+    loadFromStorage();
+    if(count < routineList.length) {
+      for(let i = count; i < routineList.length; i++) {
+        addTextBox("row" + (i + 1));
+      }
+      count = routineList.length;
+    }
+    else if (count > routineList.length) {
+      for(let i = count; i > routineList.length; i--) {
+        delTextBox("row" + i);
+      }
+      count = routineList.length;
+    }
+    for(let i = 1; i <= routineList.length; i++) {
+      document.getElementById("row" + i).value = routineList[i-1];
+    }
+  }
+  catch (e) {
+    alert("No saved routine found.");
+  }
+}
+
 /* When the addText button (+) is clicked, it adds a text box under the current
    ones. However, if there is already 7 then is disables the button as it has
    reached the limit.
@@ -66,20 +90,5 @@ save.addEventListener('click', event => {
 
 
 load.addEventListener('click', event => {
-  loadFromStorage();
-  if(count < routineList.length) {
-    for(let i = count; i < routineList.length; i++) {
-      addTextBox("row" + (i + 1));
-    }
-    count = routineList.length;
-  }
-  if (count > routineList.length) {
-    for(let i = count; i > routineList.length; i--) {
-      delTextBox("row" + i);
-    }
-    count = routineList.length;
-  }
-  for(let i = 1; i <= routineList.length; i++) {
-    document.getElementById("row" + i).value = routineList[i-1];
-  }
+  correctTextBoxes();
 });
