@@ -1,32 +1,43 @@
+"use strict";
 let count = 1;
 let routineList = [];
 
-toggleDisable = (elem, state) => {
+const toggleDisable = (elem, state) => {
   document.getElementById(elem).disabled = state;
 }
 
-addTextBox = (name) => {
+/*
+   Creates a new input box and assigns it to the variable input,
+   this is then appended to routineGrid.
+*/
+const addTextBox = (name) => {
   let input = document.createElement('input');
   input.setAttribute("id", name);
   routineGrid.appendChild(input);
+  input.classList.toggle('fade');
 }
 
-delTextBox = (name) => {
+/*
+   Deletes the element with the name passed into the function.
+*/
+const delTextBox = (name) => {
   let curr = document.getElementById(name);
   curr.remove();
 }
 
-
-addToStorage = () => {
+/*
+   Stores the current routine into local storage,
+*/
+const addToStorage = () => {
   localStorage.routineList = routineList;
-  console.log(localStorage.routineList + "stored");
+  console.log(localStorage.routineList + " stored into local storage");
 }
 
-loadFromStorage = () => {
+const loadFromStorage = () => {
     routineList = localStorage.routineList.split(",");
 }
 
-correctTextBoxes = () => {
+const correctTextBoxes = () => {
   try {
     loadFromStorage();
     if(count < routineList.length) {
@@ -50,13 +61,24 @@ correctTextBoxes = () => {
   }
 }
 
-/* When the addText button (+) is clicked, it adds a text box under the current
+
+const checkButtons = (button) => {
+  if(count >= 7) {
+    toggleDisable("addText", true);
+  }
+  else if (count <= 2) {
+    toggleDisable("delText", true);
+  }
+}
+
+/*
+   When the addText button (+) is clicked, it adds a text box under the current
    ones. However, if there is already 7 then is disables the button as it has
    reached the limit.
 */
 addText.addEventListener('click', event => {
   switch(count) {
-    case 7:
+    case 7 || 8:
       toggleDisable("addText", true);
     default:
       toggleDisable("delText", false);
@@ -64,14 +86,15 @@ addText.addEventListener('click', event => {
       addTextBox("row" + count);
   }});
 
-/* Performs the same as the addText but removes instead of creating. Once there
+/*
+   Performs the same as the addText but removes instead of creating. Once there
    is only 2 elements left in the list and the button is clicked, it disables
    the delete button as otherwise the user could click it and make the variable
    go negative which would cause an error.
 */
 delText.addEventListener('click', event => {
   switch(count) {
-    case 2:
+    case 2 || 1:
       toggleDisable("delText", true);
     default:
     delTextBox("row" + count);
