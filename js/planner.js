@@ -14,7 +14,6 @@ const addTextBox = (name) => {
   let input = document.createElement('input');
   input.setAttribute("id", name);
   routineGrid.appendChild(input);
-  input.classList.toggle('fade');
 }
 
 /*
@@ -35,6 +34,7 @@ const addToStorage = () => {
 
 const loadFromStorage = () => {
     routineList = localStorage.routineList.split(",");
+    console.log(routineList + " loaded from storage");
 }
 
 const correctTextBoxes = () => {
@@ -62,12 +62,19 @@ const correctTextBoxes = () => {
 }
 
 
-const checkButtons = (button) => {
-  if(count >= 7) {
+const checkButtons = () => {
+  console.log(count);
+  if(count >= 8) {
     toggleDisable("addText", true);
+    toggleDisable("delText", false);
   }
-  else if (count <= 2) {
+  else if (count < 2) {
     toggleDisable("delText", true);
+    toggleDisable("addText", false);
+  }
+  else if (count >= 2 && count < 8) {
+    toggleDisable("delText", false);
+    toggleDisable("addText", false);
   }
 }
 
@@ -77,14 +84,11 @@ const checkButtons = (button) => {
    reached the limit.
 */
 addText.addEventListener('click', event => {
-  switch(count) {
-    case 7 || 8:
-      toggleDisable("addText", true);
-    default:
-      toggleDisable("delText", false);
-      count = count + 1;
-      addTextBox("row" + count);
-  }});
+  count = count + 1;
+  checkButtons();
+  console.log(count);
+  addTextBox("row" + count);
+});
 
 /*
    Performs the same as the addText but removes instead of creating. Once there
@@ -93,14 +97,11 @@ addText.addEventListener('click', event => {
    go negative which would cause an error.
 */
 delText.addEventListener('click', event => {
-  switch(count) {
-    case 2 || 1:
-      toggleDisable("delText", true);
-    default:
-    delTextBox("row" + count);
-      count = count - 1;
-      toggleDisable("addText", false);
-  }});
+  delTextBox("row" + count);
+  count = count - 1;
+  checkButtons();
+  console.log(count);
+  });
 
 
 save.addEventListener('click', event => {
@@ -114,4 +115,5 @@ save.addEventListener('click', event => {
 
 load.addEventListener('click', event => {
   correctTextBoxes();
+  checkButtons();
 });

@@ -83,11 +83,6 @@ nav.menu--open .container {
   max-height: 12rem;
 }
 
-.routineList.fade {
-  transition: 5s ease-in;
-  transition-timing-function: ease-in;
-}
-
 
 nav a {
   display: block;
@@ -120,9 +115,17 @@ main {
   max-width: 100px;
 }
 
+
+
 #routineGrid input{
   padding-top: 0.5rem;
-  margin-top: 0.5rem;;
+  margin-top: 0.5rem;
+  border-color: grey;
+  border-style: solid;
+  background-color: #ffe4cc;
+  height: 2rem;
+  width: 15rem;
+  font-size: 1.5rem;
 }
 
 #addText {
