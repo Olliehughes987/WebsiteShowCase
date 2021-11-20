@@ -1,4 +1,4 @@
-# P2421386 Front End Web Development
+# Front End Web Development
 
 This website was created by Oliver Hughes for the CTEC3905 module for DeMontfort
 University. It is created using base HTML, CSS, and Javascript.
